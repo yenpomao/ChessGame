@@ -1,16 +1,17 @@
-#ifndef PAWN_H
-#define PAWN_H
+#ifndef ROOK_H
+#define ROOK_H
 
 
 #include "piece.h"
 #include "board.h"
 
-class Pawn : public Piece {
-private:
+class Rook : public Piece {
     Board* boardPtr;
 public:
-    Pawn(Color c, Board* board) : Piece(c), boardPtr(board){}
+    Rook(Color c, Board* board) : Piece(c), boardPtr(board){}
     char symbol() const override {return 'P';}
     std::vector<std::pair<int, int>> possibleMoves(int row, int col) const override;
 };
-#endif // PAWN_H
+
+
+#endif // ROOK_H
